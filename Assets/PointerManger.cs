@@ -27,9 +27,11 @@ public class PointerManger : MonoBehaviour
         {
             timer+=Time.deltaTime;
             //调出按钮
-            if (timer > xuanTingTime)
-            {   timer=0;//计时器复位
+            if (timer > xuanTingTime&&instantiatedButton==null)
+            {  // timer=0;//计时器复位
                 instantiatedButton=Instantiate(buttonToChange);//初始化按钮
+                instantiatedButton.transform.SetParent(canvas.transform,false);//作为画布的子集
+                
                 instantiatedButton.GetComponent<ButtonToChange>().Init(hit.collider.gameObject);
 
                 
@@ -37,8 +39,6 @@ public class PointerManger : MonoBehaviour
             }
 
         }
-        else{
-            timer=0;
-        }
+        
     }
 }

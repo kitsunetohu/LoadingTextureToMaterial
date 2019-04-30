@@ -7,13 +7,18 @@ using UnityEngine.UI;
 using System.IO;
 public class OpenFile : MonoBehaviour
 {
-    static public OpenFile instance;
+     public static OpenFile instance;
 
     Texture tex;
 
     public string path;
-    public GameObject needChange;
+     GameObject needChange;
 
+
+    void Start(){
+        instance=this;
+    }
+    
     public void OpenAndChangeTex(GameObject needChange)
     {
         this.needChange = needChange;
