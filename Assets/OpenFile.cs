@@ -19,10 +19,11 @@ public class OpenFile : MonoBehaviour
         instance=this;
     }
     
-    public void OpenAndChangeTex(GameObject needChange)
+    public void OpenAndChangeTex(GameObject needChange,ButtonToChange button)
     {
         this.needChange = needChange;
         OpenFileWin();
+        Destroy(button.gameObject);
     }
 
 
