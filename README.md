@@ -20,7 +20,8 @@ The following is a simple way to load texture from windows file browser and put 
 3.set layer of object should be changed texture.
 
 
-##Reminder
+
+## Reminder
 
 1.The tag of camera should be MainCamera.
 
